@@ -1,5 +1,4 @@
 var cube = document.getElementById("Cube");
-
 var min = 1;
 var max = 24;
 
