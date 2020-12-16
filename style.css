@@ -5,51 +5,116 @@
 *:before {
   box-sizing: border-box;
 }
-html,
-body {
-  height: 100%;
-  width: 100%;
-  font-family: "Open Sans", sans-serif;
-  font-size: 24px;
-  font-weight: 300;
-}
 .container {
   position: relative;
-}
-.layout-container {
-  width: 800px;
-  height: 600px;
-  position: relative;
-  margin: 0 auto;
-  background-color: aquamarine;
+  font-family: "Luckiest Guy", cursive;
+  width: 900px;
+  height: 550px;
+  margin: 10px auto;
+  background-color: #fff;
+  box-shadow: 5px 10px 18px #888888;
   perspective: 1000px;
 }
-.layout {
+.nav-container {
   width: inherit;
-  height: inherit;
+  height: 20px;
+  padding: 20px;
+}
+/* The Close Button */
+.close-icon {
+  float: right;
+  margin-top: -15px;
+}
+.close {
+  color: #50abf1;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* The Chat Button */
+.chat-icon {
+  float: left;
+
+  margin-top: -10px;
+}
+.chat {
+  color: #50abf1;
+  font-size: 28px;
+}
+
+.chat:hover,
+.chat:focus {
+  cursor: pointer;
+}
+/*players place */
+.layout-container {
+  width: inherit;
+  height: 500px;
   display: flex;
 }
-.side1 {
-  width: inherit;
+.side-container {
+  width: 50%;
   height: inherit;
-  background-color: #cccccc;
+  margin-top: 30px;
+  margin-left: 150px;
 }
-.side2 {
-  width: inherit;
-  height: inherit;
-  background-color: lightcyan;
+.player-name span {
+  font-size: 40px;
+  color: #fff;
+  -webkit-text-stroke: 2px #018bcc;
+  text-shadow: 5px 10px 18px #888888;
 }
-.player-name {
-  text-align: center;
-  color: #ffffff;
-  font-family: "Luckiest Guy", cursive;
-  -webkit-text-stroke: 2px rgb(27, 105, 252);
+.current-point {
+  background-color: #018bcc;
+  display: inline-block;
+  color: #fff;
+  border-radius: 3px;
+  padding: 10px 30px 0 30px;
+  font-size: 20px;
+  margin-top: 150px;
+  box-shadow: 5px 10px 18px #888888;
+}
+.current-point #current-score {
+  padding-left: 30px;
+  font-size: 30px;
+}
+.total-point {
+  margin-top: 88px;
+  margin-left: 50px;
+  font-size: 70px;
+  color: #018bcc;
+  text-shadow: 5px 10px 18px #888888;
+}
+/*Hold button*/
+.hold-container {
+  position: relative;
+  margin: 45%;
+}
+#holdbtn {
+  font-size: 18px;
+  color: #fff;
+  background: #018bcc;
+  padding: 13px 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 5px 10px 18px #888888;
+}
+#holdbtn:hover {
+  box-shadow: none;
 }
 .cubeContainer {
   position: relative;
-  margin: -50% auto;
-  height: 150px;
-  width: 150px;
+  margin: -40% auto;
+  height: 130px;
+  width: 130px;
   perspective: 500px;
 }
 #Cube {
@@ -67,22 +132,22 @@ body {
   background-color: white;
 }
 .face1 {
-  transform: translateZ(75px);
+  transform: translateZ(65px);
 }
 .face2 {
-  transform: rotateY(180deg) translateZ(75px);
+  transform: rotateY(180deg) translateZ(65px);
 }
 .face3 {
-  transform: rotateY(90deg) translateZ(75px);
+  transform: rotateY(90deg) translateZ(65px);
 }
 .face4 {
-  transform: rotateY(-90deg) translateZ(75px);
+  transform: rotateY(-90deg) translateZ(65px);
 }
 .face5 {
-  transform: rotateX(90deg) translateZ(75px);
+  transform: rotateX(90deg) translateZ(65px);
 }
 .face6 {
-  transform: rotateX(-90deg) translateZ(75px);
+  transform: rotateX(-90deg) translateZ(65px);
 }
 .dot {
   background-color: #50abf1;
@@ -93,8 +158,8 @@ body {
 }
 /*face1*/
 .face1 .dot1 {
-  top: 70px;
-  left: 70px;
+  top: 58px;
+  left: 58px;
 }
 /*face2*/
 .face2 .dot1 {
@@ -107,8 +172,8 @@ body {
 }
 /*face3*/
 .face3 .dot1 {
-  top: 70px;
-  left: 70px;
+  top: 58px;
+  left: 58px;
 }
 .face3 .dot2 {
   bottom: 100px;
@@ -153,8 +218,8 @@ body {
   left: 100px;
 }
 .face5 .dot5 {
-  top: 70px;
-  left: 70px;
+  top: 58px;
+  left: 58px;
 }
 /*face6*/
 .face6 .dot1 {
@@ -174,12 +239,12 @@ body {
   left: 100px;
 }
 .face6 .dot5 {
-  right: 70px;
-  left: 70px;
+  right: 58px;
+  left: 58px;
   bottom: 100px;
 }
 .face6 .dot6 {
-  right: 70px;
-  left: 70px;
+  right: 58px;
+  left: 58px;
   top: 100px;
 }
