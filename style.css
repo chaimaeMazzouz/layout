@@ -264,7 +264,7 @@
   left: 58px;
   top: 100px;
 }
-/*Active Side*/
+/*the commun code for active and notActive*/
 
 .cubelittleContainer {
   position: relative;
@@ -274,26 +274,18 @@
   width: 30px;
   perspective: 1000px;
 }
-#ActiveCube {
+#littleCube {
   width: inherit;
   height: inherit;
   transform-style: preserve-3d;
-  transition: transform 4s;
-  animation: CubeActive 4s infinite;
-  animation-timing-function: linear;
 }
-@keyframes CubeActive {
-  100% {
-    transform: rotateX(360deg) rotateY(360deg);
-  }
-}
-.sideActive {
+
+.littleSide {
   position: absolute;
   width: inherit;
   height: inherit;
   backface-visibility: hidden;
   border: 1px solid #50abf1;
-  background-color: #018bcc;
 }
 .littleFace1 {
   transform: translateZ(15px);
@@ -313,8 +305,7 @@
 .littleFace6 {
   transform: rotateX(-90deg) translateZ(15px);
 }
-.dotActive {
-  background-color: #fff;
+.littleDot {
   width: 5px;
   height: 5px;
   border-radius: 50%;
@@ -412,25 +403,30 @@
   left: 12px;
   top: 24px;
 }
-/*notActive*/
-#notActiveCube {
-  width: inherit;
-  height: inherit;
-  transform-style: preserve-3d;
-  transform: rotateX(-20deg) rotateY(40deg);
+/*Active*/
+.active #littleCube {
+  transition: transform 4s;
+  animation: CubeActive 4s infinite;
+  animation-timing-function: linear;
 }
-.sideNotActive {
-  position: absolute;
-  width: inherit;
-  height: inherit;
-  backface-visibility: hidden;
-  border: 1px solid #50abf1;
+@keyframes CubeActive {
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+.active .littleSide {
+  background-color: #018bcc;
+}
+.active .littleDot {
   background-color: #fff;
 }
-.dotNotActive {
+/*notActive*/
+.notActive #littleCube {
+  transform: rotateX(-20deg) rotateY(40deg);
+}
+.notActive .littleSide {
+  background-color: #fff;
+}
+.notActive .littleDot {
   background-color: #018bcc;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  position: absolute;
 }
