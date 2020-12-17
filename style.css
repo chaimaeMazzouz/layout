@@ -121,6 +121,7 @@
   cursor: pointer;
   border-radius: 5px;
   box-shadow: 5px 10px 18px #888888;
+  transition: box-shadow 3s;
 }
 #holdbtn:hover {
   box-shadow: none;
@@ -263,15 +264,17 @@
   left: 58px;
   top: 100px;
 }
-.cubeActiveContainer {
+/*Active Side*/
+
+.cubelittleContainer {
   position: relative;
   margin-left: 8px;
   margin-top: 10px;
   height: 30px;
   width: 30px;
-  perspective: 500px;
+  perspective: 1000px;
 }
-#CubeActive {
+#ActiveCube {
   width: inherit;
   height: inherit;
   transform-style: preserve-3d;
@@ -292,22 +295,22 @@
   border: 1px solid #50abf1;
   background-color: #018bcc;
 }
-.faceActive1 {
+.littleFace1 {
   transform: translateZ(15px);
 }
-.faceActive2 {
+.littleFace2 {
   transform: rotateY(180deg) translateZ(15px);
 }
-.faceActive3 {
+.littleFace3 {
   transform: rotateY(90deg) translateZ(15px);
 }
-.faceActive4 {
+.littleFace4 {
   transform: rotateY(-90deg) translateZ(15px);
 }
-.faceActive5 {
+.littleFace5 {
   transform: rotateX(90deg) translateZ(15px);
 }
-.faceActive6 {
+.littleFace6 {
   transform: rotateX(-90deg) translateZ(15px);
 }
 .dotActive {
@@ -317,95 +320,117 @@
   border-radius: 50%;
   position: absolute;
 }
-/*faceActive1*/
-.faceActive1 .dotActive1 {
+/*littleFace1*/
+.littleFace1 .littleDot1 {
   top: 12px;
   left: 12px;
 }
-/*faceActive2*/
-.faceActive2 .dotActive1 {
+/*littleFace2*/
+.littleFace2 .littleDot1 {
   bottom: 24px;
   right: 24px;
 }
-.faceActive2 .dotActive2 {
+.littleFace2 .littleDot2 {
   top: 24px;
   left: 24px;
 }
-/*faceActive3*/
-.faceActive3 .dotActive1 {
+/*littleFace3*/
+.littleFace3 .littleDot1 {
   top: 12px;
   left: 12px;
 }
-.faceActive3 .dotActive2 {
+.littleFace3 .littleDot2 {
   bottom: 24px;
   right: 24px;
 }
-.faceActive3 .dotActive3 {
+.littleFace3 .littleDot3 {
   top: 24px;
   left: 24px;
 }
-/*faceActive4*/
-.faceActive4 .dotActive1 {
+/*littleFace4*/
+.littleFace4 .littleDot1 {
   bottom: 24px;
   right: 24px;
 }
-.faceActive4 .dotActive2 {
+.littleFace4 .littleDot2 {
   bottom: 24px;
   left: 24px;
 }
-.faceActive4 .dotActive3 {
+.littleFace4 .littleDot3 {
   top: 24px;
   right: 24px;
 }
-.faceActive4 .dotActive4 {
+.littleFace4 .littleDot4 {
   top: 24px;
   left: 24px;
 }
-/*faceActive5*/
-.faceActive5 .dotActive1 {
+/*littleFace5*/
+.littleFace5 .littleDot1 {
   bottom: 24px;
   right: 24px;
 }
-.faceActive5 .dotActive2 {
+.littleFace5 .littleDot2 {
   bottom: 24px;
   left: 24px;
 }
-.faceActive5 .dotActive3 {
+.littleFace5 .littleDot3 {
   top: 24px;
   right: 24px;
 }
-.faceActive5 .dotActive4 {
+.littleFace5 .littleDot4 {
   top: 24px;
   left: 24px;
 }
-.faceActive5 .dotActive5 {
+.littleFace5 .littleDot5 {
   top: 12px;
   left: 12px;
 }
 /*face15*/
-.faceActive6 .dotActive1 {
+.littleFace6 .littleDot1 {
   bottom: 24px;
   right: 24px;
 }
-.faceActive6 .dotActive2 {
+.littleFace6 .littleDot2 {
   bottom: 24px;
   left: 24px;
 }
-.faceActive6 .dotActive3 {
+.littleFace6 .littleDot3 {
   top: 24px;
   right: 24px;
 }
-.faceActive6 .dotActive4 {
+.littleFace6 .littleDot4 {
   top: 24px;
   left: 24px;
 }
-.faceActive6 .dotActive5 {
+.littleFace6 .littleDot5 {
   right: 12px;
   left: 12px;
   bottom: 24px;
 }
-.faceActive6 .dotActive6 {
+.littleFace6 .littleDot6 {
   right: 12px;
   left: 12px;
   top: 24px;
+}
+/*notActive*/
+#notActiveCube {
+  width: inherit;
+  height: inherit;
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg) rotateY(40deg);
+}
+.sideNotActive {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  backface-visibility: hidden;
+  border: 1px solid #50abf1;
+  background-color: #fff;
+}
+.dotNotActive {
+  background-color: #018bcc;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  position: absolute;
 }
