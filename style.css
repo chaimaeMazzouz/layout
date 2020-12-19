@@ -45,12 +45,18 @@
 }
 .chat {
   color: #50abf1;
-  font-size: 28px;
+  font-size: 24px;
 }
 
 .chat:hover,
 .chat:focus {
   cursor: pointer;
+}
+/*back icon*/
+.back {
+  color: #50abf1;
+  font-size: 24px;
+  padding-right: 10px;
 }
 /*New Game */
 .goNewGame {
@@ -430,3 +436,4 @@
 .notActive .littleDot {
   background-color: #018bcc;
 }
+/*Work on winner*/
