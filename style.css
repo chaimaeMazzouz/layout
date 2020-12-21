@@ -551,7 +551,7 @@ Message Box
   flex: 0 1 40px;
   width: 100%;
   top: 400px;
-  background: rgba(0, 162, 255, 0.3);
+  background: rgba(0, 162, 255);
   padding: 10px;
   position: relative;
 }
@@ -569,8 +569,8 @@ Message Box
   width: 265px;
 }
 
-textarea:focus:-webkit-placeholder {
-  color: transparent;
+textarea::placeholder {
+  color: #fff;
 }
 
 .message-submit {
@@ -592,4 +592,16 @@ textarea:focus:-webkit-placeholder {
 
 .message-submit:hover {
   background: #50abf1;
+}
+
+.chat:after {
+  position: absolute;
+  background-color: red;
+  left: 70px;
+  top: 3px;
+  font-size: 14px;
+  padding: 3px;
+  color: #fff;
+  border-radius: 50%;
+  content: "1";
 }
